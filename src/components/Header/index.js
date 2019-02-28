@@ -6,9 +6,8 @@ import Menu from 'antd/lib/menu';
 import Dropdown from 'antd/lib/dropdown';
 import Icon from 'antd/lib/icon';
 import { connect } from 'react-redux';
-import { actLogOut, actGetUser, actTenantInfo } from 'skyrc-auth';
 import Content from '../Content';
-import { getDeviceList, setActiveDevice } from '../../actions';
+import { setActiveDevice } from '../../actions';
 import i18n from '../../i18n';
 import authConfig from '../../config/auth';
 
@@ -29,26 +28,7 @@ const Lang = (
 );
 
 class HeaderComponent extends React.Component {
-  constructor() {
-    super();
-    this.logout = this.logout.bind(this);
-  }
-
-  componentWillMount() {
-    this.props.actTenantInfo();
-    this.props.actGetUser();
-    this.props.getDeviceList();
-  }
-
-  logout() {
-    this.props.actLogOut();
-  }
-
   render() {
-    const { isLogin } = this.props.auth;
-    if (!isLogin) {
-      return true;
-    }
     const dropdown = (
       <Menu>
         <Menu.Item key="user">
@@ -140,15 +120,10 @@ HeaderComponent.defaultProps = {
 
 const mapStateToProps = state => ({
   auth: state.users,
-  tenant: state.tenant.tenant,
 });
 
 const mapDispatchToProps = {
-  actTenantInfo,
-  getDeviceList,
   setActiveDevice,
-  actGetUser,
-  actLogOut,
 };
 
 export default connect(

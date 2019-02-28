@@ -1,7 +1,7 @@
 module.exports = {
   name: 'React Seed',
   prefix: 'Default',
-  footerText: `Copyright © Osman Bayrak All rights reserved`,
+  footerText: 'Copyright © Osman Bayrak All rights reserved',
   dateFormat: 'DD/MM/YYYY',
   unit: 'm³',
   responsive: {

@@ -1,9 +1,9 @@
 {
-  "name": "iot",
+  "name": "React Seed",
   "version": "1.0.0",
-  "description": "React-Redux app",
+  "description": "Osman Bayrak React Seed",
   "main": "dist/main.js",
-  "author": "Yunus Emre Tatar <yunusemre.tatar@sekomyazilim.com.tr>",
+  "author": "Osman Bayrak <osmanbayrak94@gmail.com>",
   "license": "MIT",
   "keywords": [
     "react",
@@ -41,8 +41,7 @@
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.6.0",
-    "redux-thunk": "^2.3.0",
-    "skyrc-auth": "0.0.18"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "autoprefixer": "8.6.5",

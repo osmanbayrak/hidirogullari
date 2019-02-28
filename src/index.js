@@ -1,7 +1,5 @@
 import 'babel-polyfill';
 import './styles/main.css';
-import 'skyrc-auth/build/index.css';
-
 import axios from 'axios';
 import message from 'antd/lib/message';
 import React from 'react';
