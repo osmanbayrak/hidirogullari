@@ -15,12 +15,12 @@ const NotFound = () => (
       md={Config.responsive.md}
       lg={Config.responsive.lg}
     >
-      <h1 className="text-center not-found">Ooooppppssss...!!!</h1>
+      <h1 className="text-center not-found">Dikkat!</h1>
       <div className="not-found-under-title">
-        I think, You are lost. Keep calm and back to
+        Yanlış bir sayfaya geldiniz. Lütfen aşşağıdaki ana sayfa butonuna tıklayınız.
         <div className="clearfix" />
         <Button type="primary" className="marT40">
-          <Link to="/">Home page</Link>
+          <Link to="/">Ana Sayfa</Link>
         </Button>
       </div>
     </Col>

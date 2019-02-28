@@ -1,6 +1,5 @@
 import React from 'react';
-import Row from 'antd/lib/row';
-import Col from 'antd/lib/col';
+import { Col, Row } from 'antd';
 import Config from '../config';
 
 const Content = ({ children }) => (

@@ -9,9 +9,6 @@ const FooterComponent = () => (
   <footer className="footer">
     <Content>
       <div className="logos">
-        <Link to="//sekomyazilim.com.tr" target="_blank">
-          <img width={200} src={logo} alt="Sekom Yazılım" />
-        </Link>
         <span className="pull-right responsive-hide marT10">{Config.footerText}</span>
       </div>
     </Content>

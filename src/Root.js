@@ -9,7 +9,7 @@ const Root = () => (
   <Layout>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/advanced" component={Advanced} />
+      <Route exact path="/home" component={Home} />
       <Route path="*" component={NotFound} />
     </Switch>
   </Layout>

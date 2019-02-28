@@ -1,5 +1,4 @@
 import './index.css';
-
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import Menu from 'antd/lib/menu';
@@ -8,6 +7,7 @@ import Icon from 'antd/lib/icon';
 import { connect } from 'react-redux';
 import Content from '../Content';
 import i18n from '../../i18n';
+import logo from '../../assets/logos.png'
 import authConfig from '../../config/auth';
 
 function changeLanguage(lang) {
@@ -58,53 +58,11 @@ class HeaderComponent extends React.Component {
 
     return (
       <div className="header_menu">
-        <Content>
           <div className="header_menu__logo">
             <Link to="/">
-              <img src={tenant.file} alt={tenant.description} height="40" />
+              <img src={logo} alt={'logo'} height="40" />
             </Link>
           </div>
-          <div className="info marT20">
-            <Dropdown className="" overlay={Lang} trigger={['click']} position="bottomRight">
-              <span className="ant-dropdown-link marR10 cursor">
-                {i18n.t(localStorage.getItem('i18nextLng').split('-')[0])}
-                <Icon type="down" />
-              </span>
-            </Dropdown>
-            {auth ? (
-              <Dropdown overlay={dropdown} trigger={['click']} position="bottomRight">
-                <span className="ant-dropdown-link cursor">
-                  <Icon type="user" />
-                  <Icon type="down" />
-                </span>
-              </Dropdown>
-            ) : (
-              ''
-            )}
-          </div>
-          <div className="header_menu__menu marT5">
-            <Menu mode="horizontal">
-              <Menu.Item key="appstore-o">
-                <NavLink strict to="/">
-                  <Icon type="appstore-o" />
-                  <span className="reponsive-menu">{i18n.t('summary')}</span>
-                </NavLink>
-              </Menu.Item>
-              <Menu.Item key="api">
-                <NavLink to="/advanced">
-                  <Icon type="api" />
-                  <span className="reponsive-menu">{i18n.t('advanced')}</span>
-                </NavLink>
-              </Menu.Item>
-              <Menu.Item key="notification">
-                <NavLink to="/notification-rules">
-                  <Icon type="notification" />
-                  <span className="reponsive-menu">{i18n.t('notification_rules')}</span>
-                </NavLink>
-              </Menu.Item>
-            </Menu>
-          </div>
-        </Content>
       </div>
     );
   }
