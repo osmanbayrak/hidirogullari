@@ -1,0 +1,55 @@
+.water_wave {
+    position: relative;
+    text-align: center;
+    margin: 15px auto 0 auto;
+    transform-origin: left;
+
+    &__content {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        text-align: center;
+        width: 100%;
+
+        &--percent {
+            position: absolute;
+            text-align: center;
+            display: block;
+            width: 100%;
+            bottom: 95px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        &--count {
+            font-size: 18px;
+            position: absolute;
+            display: block;
+            bottom: 65px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &__canvas {
+        transform: scale(1);
+        transform-origin: 0 0;
+    }
+}
+
+.currentWaterMeterCircle{
+    width: 222px;
+    height: 222px;
+    border: 9px solid #464646;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    padding-top: 85px;
+    font-size: 42px;
+}
+
+.canvas-wrapper {
+    width: auto;
+    overflow: hidden;
+    height: 220px;
+    text-align: center;
+}

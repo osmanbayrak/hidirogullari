@@ -1,0 +1,18 @@
+.un-style-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center; }
+  .un-style-list li {
+    float: left;
+    width: 30%; }
+
+.color-box {
+  width: 10px;
+  height: 10px;
+  display: inline-block; }
+  .color-box.red {
+    background: #ea6053; }
+  .color-box.generated {
+    background: #ffc658; }
+  .color-box.blue {
+    background: #108ee9; }

@@ -1,0 +1,156 @@
+{
+  "name": "iot",
+  "version": "1.0.0",
+  "description": "React-Redux app",
+  "main": "dist/main.js",
+  "author": "Yunus Emre Tatar <yunusemre.tatar@sekomyazilim.com.tr>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "redux",
+    "webpack",
+    "react-router 4",
+    "moment",
+    "axios",
+    "babel",
+    "redux-logger",
+    "redux-promise",
+    "redux-thunk"
+  ],
+  "dependencies": {
+    "antd": "^3.8.0",
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "history": "^4.7.2",
+    "i18next": "^11.5.0",
+    "i18next-browser-languagedetector": "^2.2.2",
+    "i18next-xhr-backend": "^1.5.1",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-countup": "^3.0.3",
+    "react-day-picker": "^7.1.10",
+    "react-dev-utils": "^5.0.1",
+    "react-dom": "^16.4.2",
+    "react-i18next": "^7.10.1",
+    "react-input-mask": "^2.0.4",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "recharts": "^1.1.0",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "skyrc-auth": "0.0.18"
+  },
+  "devDependencies": {
+    "autoprefixer": "8.6.5",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.1",
+    "babel-runtime": "6.26.0",
+    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "chalk": "1.1.3",
+    "css-loader": "^0.28.7",
+    "dotenv": "4.0.0",
+    "dotenv-expand": "4.2.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.5",
+    "fs-extra": "3.0.1",
+    "html-webpack-plugin": "2.29.0",
+    "jest": "^23.6.0",
+    "node-sass": "^4.9.2",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "postcss-flexbugs-fixes": "3.2.0",
+    "postcss-loader": "2.0.8",
+    "prettier": "^1.14.2",
+    "raf": "3.4.0",
+    "redux-devtools-extension": "^2.13.5",
+    "resolve": "1.6.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.19.0",
+    "sw-precache-webpack-plugin": "0.11.4",
+    "url-loader": "0.6.2",
+    "webpack": "3.8.1",
+    "webpack-dashboard": "^2.0.0",
+    "webpack-dev-server": "2.9.4",
+    "webpack-manifest-plugin": "1.3.2"
+  },
+  "proxy": "http://10.133.151.151:81",
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "format": "prettier --print-width=100 --single-quote --trailing-comma all --write \"{src, __test__}/**/*.js\"",
+    "start-js": "node scripts/start.js",
+    "lint:eslint": "eslint ./src",
+    "start": "npm-run-all -p watch-css start-js",
+    "dashboard": "webpack-dashboard",
+    "build": "npm run format && npm run build-css && node scripts/build.js",
+    "test": "jest --verbose",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --verbose --coverage",
+    "deployofis": "npm run build && docker build -t registry.sekomy.com/lottcp-ui:staging . --no-cache && docker push registry.sekomy.com/lottcp-ui:staging",
+    "redux": "npm run build && docker build -t registry.sekomy.com/lottcp-ui:redux . --no-cache && docker push registry.sekomy.com/lottcp-ui:redux"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/test/**/?(*.)(spec|test).{js,jsx,mjs}",
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "mjs",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

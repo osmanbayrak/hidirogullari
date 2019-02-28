@@ -1,0 +1,63 @@
+$blue: #108ee9;
+
+.header_menu {
+    background: white;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    min-height: 60px;
+    height: auto;
+
+    &__menu {
+        position: relative;
+        left: 100px;
+
+        @media screen and (max-width: 768px) {
+            left: 0;
+        }
+
+        .ant-menu{
+            .ant-menu-item{
+                &:hover{
+                    border: 0 !important;        
+                }
+                border: 0 !important;    
+            }
+
+        }
+        
+        .reponsive-menu {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .ant-menu{
+            background: none;
+
+        }
+
+        .selected{ 
+            color: $blue !important;
+        }
+    }
+
+    .ant-menu-horizontal{
+        border-bottom: 0;
+    }
+
+    &__logo {
+        float: left;
+        margin-top: 10px;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .info {
+        float: right;
+        position: relative;
+        z-index: 5;
+    }
+}

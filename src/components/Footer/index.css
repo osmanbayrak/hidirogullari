@@ -1,0 +1,15 @@
+.footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  color: #b2b8c0;
+  padding: 20px 10px 0 10px;
+  height: 75px;
+  background-color: #e8eaed; }
+  @media screen and (max-width: 768px) {
+    .footer .logos {
+      text-align: center; } }
+
+@media screen and (max-width: 768px) {
+  .responsive-hide {
+    display: none; } }
