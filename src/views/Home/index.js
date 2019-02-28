@@ -3,9 +3,7 @@ import './index.css';
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getSummary } from '../../actions';
-import { Content, DeviceSelect } from '../../components';
-import HomeChart from './charts';
+import { Content } from '../../components';
 import Info from './info';
 
 class HomePage extends React.Component {
@@ -26,12 +24,10 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const { summary, devices, active_device } = this.props;
+    const { active_device } = this.props;
     return (
       <Content>
-        {devices.length > 1 ? <DeviceSelect /> : null}
         <div className="clearfix" />
-        <HomeChart {...summary} />
         <Info {...active_device} />
       </Content>
     );
@@ -39,7 +35,6 @@ class HomePage extends React.Component {
 }
 
 const mapDispatchToProps = {
-  getSummary,
 };
 
 const mapStateToProps = state => ({

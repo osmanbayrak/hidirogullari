@@ -7,7 +7,6 @@ import Dropdown from 'antd/lib/dropdown';
 import Icon from 'antd/lib/icon';
 import { connect } from 'react-redux';
 import Content from '../Content';
-import { setActiveDevice } from '../../actions';
 import i18n from '../../i18n';
 import authConfig from '../../config/auth';
 
@@ -123,7 +122,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  setActiveDevice,
 };
 
 export default connect(
