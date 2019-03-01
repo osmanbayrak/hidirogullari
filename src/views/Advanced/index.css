@@ -16,23 +16,3 @@
     background: #ffc658; }
   .color-box.blue {
     background: #108ee9; }
-
-  .kayit-form {
-    max-width: 500px;
-    text-align: center;
-    margin-right: 20%;
-  }
-
-  .kayit-form > label {
-    font-weight: bolder;
-  }
-
-  .kayit-form > div {
-    margin-bottom:  10px;
-  }
-  .kayit-form-forgot {
-    float: right;
-  }
-  .kayit-form-button {
-    width: 100%;
-  }

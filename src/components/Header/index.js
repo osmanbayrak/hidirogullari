@@ -63,6 +63,11 @@ class HeaderComponent extends React.Component {
               <img src={logo} alt={'logo'} height="40" />
             </Link>
           </div>
+          <div className="header_menu__logo" style={{float: 'right'}}>
+            <Link to="/">
+              <img src={logo} alt={'logo'} height="40" />
+            </Link>
+          </div>
       </div>
     );
   }
