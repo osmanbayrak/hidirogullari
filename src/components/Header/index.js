@@ -7,7 +7,7 @@ import Icon from 'antd/lib/icon';
 import { connect } from 'react-redux';
 import Content from '../Content';
 import i18n from '../../i18n';
-import logo from '../../assets/logos.png'
+import logo from '../../assets/logos.png';
 import authConfig from '../../config/auth';
 
 function changeLanguage(lang) {
@@ -58,16 +58,11 @@ class HeaderComponent extends React.Component {
 
     return (
       <div className="header_menu">
-          <div className="header_menu__logo">
-            <Link to="/">
-              <img src={logo} alt={'logo'} height="40" />
-            </Link>
-          </div>
-          <div className="header_menu__logo" style={{float: 'right'}}>
-            <Link to="/">
-              <img src={logo} alt={'logo'} height="40" />
-            </Link>
-          </div>
+        <div className="header_menu__logo">
+          <Link to="/">
+            <img src={logo} alt={'logo'} height="40" />
+          </Link>
+        </div>
       </div>
     );
   }
@@ -84,8 +79,7 @@ const mapStateToProps = state => ({
   auth: state.users,
 });
 
-const mapDispatchToProps = {
-};
+const mapDispatchToProps = {};
 
 export default connect(
   mapStateToProps,

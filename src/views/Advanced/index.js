@@ -1,7 +1,7 @@
 import './index.css';
 import React from 'react';
 import { Input, Form, notification, Button, Card } from 'antd';
-import Content from '../../components/Content'
+import Content from '../../components/Content';
 import Axios from 'axios';
 import TextArea from 'antd/lib/input/TextArea';
 const createForm = Form.create;
@@ -10,19 +10,19 @@ const createForm = Form.create;
 // import i18n from '../../i18n';
 
 class Advance extends React.Component {
-   constructor(props) {
-     super(props);
-     this.state = {
-       isim: "",
-       soyisim: "",
-       telefon: "",
-       email: "",
-       yas: "",
-       meslek: "",
-       adres: "",
-       tarih: new Date()
-     };
-   }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isim: '',
+      soyisim: '',
+      telefon: '',
+      email: '',
+      yas: '',
+      meslek: '',
+      adres: '',
+      tarih: new Date(),
+    };
+  }
 
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -37,11 +37,7 @@ class Advance extends React.Component {
       },
     };
 
-    return (
-      <Content>
-        Sayfayı yenileyin!
-      </Content>
-    );
+    return <Content>Sayfayı yenileyin!</Content>;
   }
 }
 

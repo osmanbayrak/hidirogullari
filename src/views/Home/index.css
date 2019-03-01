@@ -23,10 +23,5 @@
     min-height: 300px;
     padding: 10px; }
 
-  .kayit-form {
-    margin-right: 25%;
-  }
-
-  .kayit-form > div {
-    padding-bottom: 15px;
-  }
+.kayit-form > div {
+  margin-bottom: 25px; }

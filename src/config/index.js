@@ -5,8 +5,8 @@ module.exports = {
   dateFormat: 'DD/MM/YYYY',
   responsive: {
     xs: 23,
-    sm: 16,
+    sm: 20,
     md: 18,
-    lg: 12,
+    lg: 20,
   },
 };
